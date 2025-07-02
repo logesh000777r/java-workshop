@@ -1,6 +1,6 @@
 package com.vetias.java.basics;
 
-public class Greetings {
+public class Greeings {
     public static void main(String[] args){
         System.out.println("My First java Program!");
     }
