@@ -6,3 +6,11 @@ public class HostelBuilding extends Building {
 
 
 }
+@Override
+public void printDetails(){
+    super.printDetails();
+    System.out.println("Mess Available:"+isMessAvailable);
+    System.out.println("Number of rooms Available:"+numberofrooms);
+
+}
+

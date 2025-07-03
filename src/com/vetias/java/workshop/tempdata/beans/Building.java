@@ -8,6 +8,5 @@ public class Building {
     private int floor;
     private LocalDateTime openingHours;
     private LocalDateTime closingHours;
-    
 
 }
