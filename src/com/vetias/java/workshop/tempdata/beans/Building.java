@@ -10,3 +10,4 @@ public class Building {
     private LocalDateTime closingHours;
 
 }
+                                                            
