@@ -1,8 +1,8 @@
 package com.vetias.java.workshop.tempdata.beans;
 public class Zone{
     private String name;
-    private String ZoneID;
-    private String Type;
+    private String zoneID;
+    private String type;
     private double area;
     private String description;
 

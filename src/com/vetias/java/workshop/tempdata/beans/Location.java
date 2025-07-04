@@ -9,12 +9,12 @@ public class Location {
     private String contact;
 
     public Location(String name, double latitude, double longitude, String address, String postalCode, String contact) {
-        this.name = setName(name);
-        this.latitude = setLatitude(latitude);
-        this.longitude = setLongitude(longitude);
-        this.address = setAddress(address);
-        this.postalCode = setPostalCode(postalCode);
-        this.contact = setContact(contact);
+        this.name = name;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.address = address;
+        this.postalCode = postalCode;
+        this.contact = contact;
     }
 
     public String getName() {
@@ -59,6 +59,12 @@ public class Location {
         this.contact = contact;
     }
     
+
+@Override
+    public String toString(){
+        return "Location { name:" +name+ ",Latitude:" +latitude+ ",Longitude:"
+        +longitude+ ",Address:" +address+ ",PostalCode:" +postalCode+ ",Contact:" +contact+ "}";
+    }
 }
 
 

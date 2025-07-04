@@ -4,7 +4,7 @@ public class AcademicBuilding extends Building{
     private boolean hasLibraryOpen;
     private boolean isAuditoriumOpen;
 
-    public AcademicBuilding(boolean hasLibraryOpen, boolean isAuditoriumOpen) {
+    public AcademicBuilding(boolean hasLibraryOpen, boolean isAuditoriumOpen ) {
         this.hasLibraryOpen = hasLibraryOpen;
         this.isAuditoriumOpen = isAuditoriumOpen;
     }
@@ -20,7 +20,6 @@ public class AcademicBuilding extends Building{
     public void setIsAuditoriumOpen(boolean isAuditoriumOpen) {
         this.isAuditoriumOpen = isAuditoriumOpen;
     }
-    @Override
     public void displayAcademicBuildingInfo() {
         super.PrintDetails();
         System.out.println("Has Library: " + (hasLibraryOpen ? "Yes" : "No"));

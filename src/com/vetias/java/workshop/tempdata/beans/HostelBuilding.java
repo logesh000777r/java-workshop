@@ -4,7 +4,7 @@ public class HostelBuilding extends Building {
     private int numberOfRooms;
     private boolean isMessOpen;
 
-    public Hostel(int numberOfRooms, boolean isMessOpen) {
+    public HostelBuilding(int numberOfRooms, boolean isMessOpen) {
         this.numberOfRooms = numberOfRooms;
         this.isMessOpen = isMessOpen;
     }
@@ -24,7 +24,6 @@ public class HostelBuilding extends Building {
     public void setMessOpen(boolean messOpen) {
         isMessOpen = messOpen;
     }
-    @Override
     public void displayHostelInfo() {
         super.PrintDetails();
         System.out.println("Number of Rooms: " + numberOfRooms);
