@@ -4,11 +4,21 @@ import java.util.Objects;
 public class Floor{
     private int floorName;
     private double number;
+    private Zone[] zones;
 
     public Floor(int floorName, double number) {
         this.floorName = floorName;
         this.number = number;
     }
+
+    public Zone[] getZones() {
+        return zones;
+    }
+
+    public void setZones(Zone[] zones) {
+        this.zones = zones;
+    }
+
 
     public int getFloorName() {
         return floorName;

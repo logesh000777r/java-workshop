@@ -5,6 +5,7 @@ public class Zone{
     private String type;
     private double area;
     private String description;
+    private Zone[] zonesList;
 
     public Zone(String name, String zoneID, String type, double area, String description) {
         this.name = name;
@@ -12,6 +13,14 @@ public class Zone{
         this.type = type;
         this.area = area;
         this.description = description;
+    }
+
+    public Zone[] getZonesList() {
+        return zonesList;
+    }
+
+    public void setZonesList(Zone[] zonesList) {
+        this.zonesList = zonesList;
     }
 
     public String getName() {

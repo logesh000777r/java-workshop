@@ -7,6 +7,7 @@ public class Building{
     private int floors;
     private LocalDateTime openingHours;
     private LocalDateTime closingHours;
+    private Floor[] floorsList;
 
     // (Add this constructor to the Building class)
     public Building(String name, String area, int floors, LocalDateTime openingHours, LocalDateTime closingHours) {
@@ -16,6 +17,14 @@ public class Building{
         this.floors = floors;
         this.openingHours = openingHours;
         this.closingHours = closingHours;
+    }
+
+    public Floor[] getFloorsList() {
+        return floorsList;
+    }
+
+    public void setFloorsList(Floor[] floorsList) {
+        this.floorsList = floorsList;
     }
 
     public String getName() {
