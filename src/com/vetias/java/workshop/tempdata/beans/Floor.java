@@ -38,6 +38,13 @@ public class Floor{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Floor floor = (Floor) o
+    Floor floor = (Floor) o;
+    return floorName == floor.floorName &&
+            Double.compare(floor.number, number) == 0;
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(floorName, number);
+    }
 }
 
