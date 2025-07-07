@@ -1,12 +1,14 @@
 package com.vetias.java.workshop.tempdata.beans;
 
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class HostelBuilding extends Building {
     private int numberOfRooms;
     private boolean isMessOpen;
 
-    public HostelBuilding(int numberOfRooms, boolean isMessOpen) {
+    public HostelBuilding(String name, String area, int floors, LocalDateTime openingHours, LocalDateTime closingHours, int numberOfRooms, boolean isMessOpen) {
+        super(name, area, floors, openingHours, closingHours); // Pass required arguments to Building constructor
         this.numberOfRooms = numberOfRooms;
         this.isMessOpen = isMessOpen;
     }

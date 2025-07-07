@@ -1,4 +1,6 @@
 package com.vetias.java.workshop.tempdata.beans;
+import java.util.Objects;
+
 public class Floor{
     private int floorName;
     private double number;
