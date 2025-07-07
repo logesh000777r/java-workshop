@@ -75,33 +75,3 @@ public class AcademicBuilding extends Building{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
