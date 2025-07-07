@@ -1,4 +1,4 @@
-package com.vetias.java.workshop.basics;
+package com.vetias.java.basics;
 
 public class StringExample {
     public static void main(String[] args) {
