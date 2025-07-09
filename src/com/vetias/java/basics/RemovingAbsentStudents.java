@@ -1,6 +1,5 @@
 package com.vetias.java.basics;
 import java.util.Scanner;
-import java.util.Arrays;
 public class RemovingAbsentStudents {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

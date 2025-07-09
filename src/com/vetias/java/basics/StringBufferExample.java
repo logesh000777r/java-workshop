@@ -1,8 +1,8 @@
-package com.vetias.java.workshop.basics;
+package com.vetias.java.basics;
 
-public class StringBuilderExample {
+public class StringBufferExample {
     public static void main(String[] args) {
-        StringBuilder ob=new StringBuilder();
+        StringBuffer ob=new StringBuffer();
         ob.append("Java");
         ob.append(" is").append(" ").append("the").append(" ").append("most")
         .append(" ").append("used").append(" ").append("language").append(" ")
@@ -10,6 +10,5 @@ public class StringBuilderExample {
         String result = ob.toString();
         System.out.println(result);
     }
-        
 
 }

@@ -3,22 +3,34 @@ import java.time.LocalDateTime;
 
 public class Building{
     private String name;
-    private double  area;
+    private String  area;
     private int floors;
     private LocalDateTime openingHours;
     private LocalDateTime closingHours;
+    private Floor[] floorsList;
 
-    public Building(String name, double area, int floors, LocalDateTime openingHours, LocalDateTime closingHours) {
+    // (Add this constructor to the Building class)
+    public Building(String name, String area, int floors, LocalDateTime openingHours, LocalDateTime closingHours) {
+    // Initialize fields accordingly
         this.name = name;
         this.area = area;
         this.floors = floors;
         this.openingHours = openingHours;
         this.closingHours = closingHours;
     }
+
+    public Floor[] getFloorsList() {
+        return floorsList;
+    }
+
+    public void setFloorsList(Floor[] floorsList) {
+        this.floorsList = floorsList;
+    }
+
     public String getName() {
         return name;
     }
-    public double getArea() {
+    public String getArea() {
         return area;
     }
     public int getFloors() {
@@ -33,7 +45,7 @@ public class Building{
     public void setName(String name) {
         this.name = name;
     }
-    public void setArea(double area) {
+    public void setArea(String area) {
         this.area = area;
     }
     public void setFloors(int floors) {
