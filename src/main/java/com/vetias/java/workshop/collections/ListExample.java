@@ -14,7 +14,6 @@ public class ListExample {
         names.add("locke");
         System.out.println(names);
         System.out.println(names.set(1,"SACHINBABU"));
-        System.out.println(names.add(2,"babu"));
 
 
         for(int i=0;i<names.size();i++){
