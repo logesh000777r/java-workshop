@@ -13,15 +13,17 @@ public class ListExample {
         names.add("Logesh");
         names.add("locke");
         System.out.println(names);
-        System.out.println(names.set(1,"SACHINBABU"));
+        // System.out.println(names.set(1,"SACHINBABU"));
 
 
-        for(int i=0;i<names.size();i++){
-            System.out.println(names.get(i));
-        }
-        System.out.println(names.contains("Mithun"));
-        System.out.println(names.reversed());
+        // for(int i=0;i<names.size();i++){
+        //     System.out.println(names.get(i));
+        // }
+        // System.out.println(names.contains("Mithun"));
+        // System.out.println(names.reversed());
+        names.forEach(System.out::println);
 
     }
 
 }
+  
