@@ -10,9 +10,10 @@ public class NamesStartsWithSCount {
         names.add("Sachin");
         names.add("Abullaize");
         names.add("Logesh");
+        names.add("Mithun");
         names.add("locke");
         System.out.println(names);
-        long nameCount= names.stream().filter(name->name.startsWith("S")).count();
+        long nameCount= names.stream().filter(name->name.startsWith("M")).distinct().count();
         System.out.println(nameCount);
     }
 
