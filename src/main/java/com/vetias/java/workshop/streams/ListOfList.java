@@ -1,22 +1,16 @@
 package com.vetias.java.workshop.streams;
 
-import java.util.ArrayList;
 import java.util.List;
+
+import java.util.Arrays;
 
 public class ListOfList {
     public static void main(String[] args) {
-        List<String> cs=new ArrayList<>();
-        List<String> ai=new ArrayList<>();
-        cs.add("Mithun");
-        cs.add("Abullaize");
-        cs.add("Sachin");
-        cs.add("Sarath");
-        ai.add("Emmanuel");
-        ai.add("SreeKrishna");
-        ai.add("Shoban");
-        List<String> comsci=new ArrayList<>();
-        comsci = cs + ai;
-
+        List<Integer> csRollno=Arrays.asList(1001,1003,1005,1007);
+        List<Integer> aiRollno=Arrays.asList(1002,1004,1006,1008);
+        List<Integer> allRollnos=java.util.stream.Stream.concat(csRollno.stream(), aiRollno.stream()).sorted().toList();
+        System.out.println(allRollnos);
+       
 
 
 
