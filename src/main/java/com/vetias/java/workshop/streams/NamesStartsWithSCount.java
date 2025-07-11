@@ -1,4 +1,4 @@
-package com.vetias.java.workshop.stream;
+package com.vetias.java.workshop.streams;
 
 import java.util.ArrayList;
 import java.util.List;
