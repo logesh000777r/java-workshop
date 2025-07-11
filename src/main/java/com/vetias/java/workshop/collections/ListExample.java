@@ -21,7 +21,8 @@ public class ListExample {
         // }
         // System.out.println(names.contains("Mithun"));
         // System.out.println(names.reversed());
-        names.forEach(System.out::println);
+        // names.forEach(System.out::println);
+        
 
     }
 
