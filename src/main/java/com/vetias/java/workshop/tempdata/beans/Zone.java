@@ -1,26 +1,34 @@
 package com.vetias.java.workshop.tempdata.beans;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 public class Zone{
     private String name;
     private String zoneID;
     private String type;
     private double area;
     private String description;
-    private Zone[] zonesList;
+    private List<Sensor> sensors;
 
-    public Zone(String name, String zoneID, String type, double area, String description) {
-        this.name = name;
-        this.zoneID = zoneID;
-        this.type = type;
-        this.area = area;
-        this.description = description;
+    public Zone(String name, String zoneID, String type,
+            double area, String description,
+            Collection<Sensor> sensors) {
+    this.name = name;
+    this.zoneID = zoneID;
+    this.type = type;
+    this.area = area;
+    this.description = description;
+    this.sensors = (sensors != null) ? new ArrayList<>(sensors) : new ArrayList<>();
     }
 
-    public Zone[] getZonesList() {
-        return zonesList;
+    public List<Sensor> getSensors() {
+        return sensors;
     }
 
-    public void setZonesList(Zone[] zonesList) {
-        this.zonesList = zonesList;
+    public void setSensors(List<Sensor> sensors) {
+        this.sensors = sensors;
     }
 
     public String getName() {
@@ -100,4 +108,4 @@ public class Zone{
         return result;
     }
 }
-
+//
