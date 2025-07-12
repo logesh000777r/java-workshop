@@ -7,7 +7,7 @@ public class Building{
     private int floors;
     private LocalDateTime openingHours;
     private LocalDateTime closingHours;
-    private Floor[] floorsList;
+    
 
     // (Add this constructor to the Building class)
     public Building(String name, String area, int floors, LocalDateTime openingHours, LocalDateTime closingHours) {

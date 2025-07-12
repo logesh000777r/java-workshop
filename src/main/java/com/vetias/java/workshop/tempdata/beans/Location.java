@@ -1,5 +1,8 @@
 package com.vetias.java.workshop.tempdata.beans;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Location {
     private String name;
     private double latitude;
@@ -7,24 +10,30 @@ public class Location {
     private String address;
     private String postalCode;
     private String contact;
-    private Building[] building;
+    private Set<Building> buildings;
 
-    public Location(String name, double latitude, double longitude, String address, String postalCode, String contact, Building[] building) {
+    public Location(String name, double latitude, double longitude,
+                    String address, String postalCode, String contact,
+                    Set<Building> buildings) {
         this.name = name;
         this.latitude = latitude;
         this.longitude = longitude;
         this.address = address;
         this.postalCode = postalCode;
         this.contact = contact;
-        this.building = building;
+        this.buildings = buildings != null
+                         ? new HashSet<>(buildings)
+                         : new HashSet<>();
     }
 
-    public Building[] getBuilding() {
-        return building;
+    public Set<Building> getBuildings() {
+        return buildings;
     }
 
-    public void setBuilding(Building[] building) {
-        this.building = building;
+    public void setBuildings(Set<Building> buildings) {
+        this.buildings = buildings != null
+                         ? new HashSet<>(buildings)
+                         : new HashSet<>();
     }
 
     public String getName() {
@@ -71,8 +80,8 @@ public class Location {
 
     @Override
     public String toString(){
-        return "Location { name:" +name+ ",Latitude:" +latitude+ ",Longitude:"
-        +longitude+ ",Address:" +address+ ",PostalCode:" +postalCode+ ",Contact:" +contact+ ",BuildingCount:" + (building != null ? building.length : 0) + "}";
+        return "Location { name:" + name + ",Latitude:" + latitude + ",Longitude:"
+        + longitude + ",Address:" + address + ",PostalCode:" + postalCode + ",Contact:" + contact + ",BuildingCount:" + (buildings != null ? buildings.size() : 0) + "}";
     }
 
     @Override
@@ -88,8 +97,8 @@ public class Location {
         if (!address.equals(location.address)) return false;
         if (!postalCode.equals(location.postalCode)) return false;
         if (!contact.equals(location.contact)) return false;
-        // Arrays.equals is used to compare arrays
-        return java.util.Arrays.equals(building, location.building);
+        // Use Set.equals to compare sets
+        return buildings.equals(location.buildings);
     }
     @Override
     public int hashCode() {
@@ -102,7 +111,7 @@ public class Location {
         result = 31 * result + address.hashCode();
         result = 31 * result + postalCode.hashCode();
         result = 31 * result + contact.hashCode();
-        result = 31 * result + java.util.Arrays.hashCode(building);
+        result = 31 * result + (buildings != null ? buildings.hashCode() : 0);
         return result;
     }
 }
