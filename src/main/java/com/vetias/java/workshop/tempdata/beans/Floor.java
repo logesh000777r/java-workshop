@@ -1,21 +1,26 @@
 package com.vetias.java.workshop.tempdata.beans;
+import java.util.Set;
+import java.util.HashSet;
 import java.util.Objects;
 
 public class Floor{
     private int floorName;
     private double number;
-    private Zone[] zones;
+    private Set<Zone> zones;
 
     public Floor(int floorName, double number) {
         this.floorName = floorName;
         this.number = number;
+        this.zones = zones!=null
+                     ? new HashSet<>(zones)
+                     : new HashSet<>();
     }
 
-    public Zone[] getZones() {
+    public Set<Zone> getZones() {
         return zones;
     }
 
-    public void setZones(Zone[] zones) {
+    public void setZones(Set<Zone> zones) {
         this.zones = zones;
     }
 
