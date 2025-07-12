@@ -1,5 +1,7 @@
 package com.vetias.java.workshop.tempdata.beans;
 import java.time.LocalDateTime;
+import java.util.Collection;
+import java.util.TreeSet;
 
 public class Building{
     private String name;
@@ -7,23 +9,27 @@ public class Building{
     private int floors;
     private LocalDateTime openingHours;
     private LocalDateTime closingHours;
-    
+    private TreeSet<Floor> floorsList;  // changed
 
-    // (Add this constructor to the Building class)
-    public Building(String name, String area, int floors, LocalDateTime openingHours, LocalDateTime closingHours) {
-    // Initialize fields accordingly
+    public Building(String name, String area, int floors,
+                    LocalDateTime openingHours, LocalDateTime closingHours,
+                    Collection<Floor> initialFloors) {
         this.name = name;
         this.area = area;
         this.floors = floors;
         this.openingHours = openingHours;
         this.closingHours = closingHours;
+        this.floorsList = (initialFloors != null)
+            ? new TreeSet<>(initialFloors)
+            : new TreeSet<>();
     }
+    
 
-    public Floor[] getFloorsList() {
+    public TreeSet<Floor> getFloorsList() {
         return floorsList;
     }
 
-    public void setFloorsList(Floor[] floorsList) {
+    public void setFloorsList(TreeSet<Floor> floorsList) {
         this.floorsList = floorsList;
     }
 
