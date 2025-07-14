@@ -6,7 +6,7 @@ import java.sql.Statement;
 import org.h2.jdbcx.JdbcDataSource; 
 
 public class OrganizationDAO {
-    
+
     public void createTable(){
         JdbcDataSource h2DataSource= new JdbcDataSource();
         h2DataSource.setUrl("jdbc:h2:mem:tempdataDB");
@@ -15,7 +15,7 @@ public class OrganizationDAO {
             Statement statement = dbConnection.createStatement()){
                 statement.execute("""
                         create table organization(
-                        id int AUTO_INCREMENT PRIMARY KEY'
+                        id int AUTO_INCREMENT PRIMARY KEY,
                         NAME VARCHAR(100),
                         WEBSITE VARCHAR(100),
                         EMAIL VARCHAR(100),
