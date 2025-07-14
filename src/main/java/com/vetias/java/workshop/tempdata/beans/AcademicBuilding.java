@@ -2,14 +2,16 @@ package com.vetias.java.workshop.tempdata.beans;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
+import java.util.Collection;
 
 public class AcademicBuilding extends Building{
     private boolean hasLibraryOpen;
     private boolean isAuditoriumOpen;
 
     // Add the required parameters for Building to this constructor
-    public AcademicBuilding(String name, String area, int floors,LocalDateTime openingHours,LocalDateTime closingHours,boolean hasLibraryOpen, boolean isAuditoriumOpen ) {
-        super(name, area, floors,openingHours,closingHours);
+    public AcademicBuilding(String name, String area, int floors,LocalDateTime openingHours,
+    LocalDateTime closingHours,boolean hasLibraryOpen, boolean isAuditoriumOpen,Collection<Floor> initialFloors) {
+        super(name, area, floors,openingHours,closingHours,initialFloors);
         this.hasLibraryOpen = hasLibraryOpen;
         this.isAuditoriumOpen = isAuditoriumOpen;
     }
