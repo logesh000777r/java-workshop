@@ -23,7 +23,7 @@ public class Tempdata {
         "9843170755",123345678,LocalDate.of(1960,04,23));
         System.out.println(vet);
         System.out.println(vet.name());
-        System.out.println(vet.completeAddress());
+        System.out.println(vet.description());
         System.out.println(vet.website());
         System.out.println(vet.email());
         System.out.println(vet.contactNumber());
