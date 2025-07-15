@@ -59,6 +59,7 @@ public class OrganizationDAO {
                     preparedStatement.setString(4,vet.email());
                     preparedStatement.setString(5,vet.contactNumber());
                     preparedStatement.setLong(6,vet.registration());
+                    preparedStatement.executeUpdate();
                     
         }catch(SQLException sqlException) {
             System.out.println("Error inserting into table:"+sqlException);
@@ -74,7 +75,8 @@ public class OrganizationDAO {
             preparedStatement.setString(1,name);
             ResultSet resultSet = preparedStatement.executeQuery();
             if(resultSet != null && resultSet.next()) {
-                organization = new Organization(resultSet.getString("name"),
+                organization = new Organization(
+                resultSet.getString("name"),
                 resultSet.getString("description"),
                 resultSet.getString("website"),
                 resultSet.getString("email"),
