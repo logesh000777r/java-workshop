@@ -28,6 +28,11 @@ public class JdbcExample {
         "Vellalar Educational Trust:","www.vet.com","contact@vet.com","91-923847234",
         12345L,null);
         organizationDAO.save(dbConnection,vet);
+        Organization myorganization =organizationDAO.findByName(dbConnection,"VET");
+        System.out.println("My Organization:"+myorganization);
+
+
+
 
     }
 

@@ -2,6 +2,7 @@ package com.vetias.java.workshop.tempdata.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 // import org.h2.jdbcx.JdbcDataSource;
@@ -65,6 +66,26 @@ public class OrganizationDAO {
         return 0;
     }
 
-    public Organization findByName(Connection)
+    public Organization findByName(Connection dbConnection,String name){
+        Organization organization=null;
+        try(PreparedStatement preparedStatement =dbConnection.prepareStatement("""
+                select * from organization where name = ?
+                """)) {
+            preparedStatement.setString(1,name);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if(resultSet != null && resultSet.next()) {
+                organization = new Organization(resultSet.getString("name"),
+                resultSet.getString("description"),
+                resultSet.getString("website"),
+                resultSet.getString("email"),
+                resultSet.getString("contact_number"),
+                resultSet.getLong("resgistration"),null);
 
+            }
+        }catch(SQLException exception) {
+            System.out.println("Error finding in table:"+exception);
+        }
+        return organization;
+
+}
 }
