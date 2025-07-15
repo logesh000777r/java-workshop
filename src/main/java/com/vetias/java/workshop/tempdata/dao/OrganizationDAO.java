@@ -65,4 +65,6 @@ public class OrganizationDAO {
         return 0;
     }
 
+    public Organization findByName(Connection)
+
 }
