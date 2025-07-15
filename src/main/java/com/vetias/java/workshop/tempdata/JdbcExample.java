@@ -25,8 +25,8 @@ public class JdbcExample {
         OrganizationDAO organizationDAO =new OrganizationDAO();
         organizationDAO.createTable(dbConnection);
         Organization vet =new Organization("VET",
-        "Vellalar Educational Trust:","www.vet.com","contact@vet.com","91-923847234",
-        12345L,null);
+        "www.vet.com","contact@vet.com","9843170755",12345L,
+        "Vellalar Educational Trust:",null);
         organizationDAO.save(dbConnection,vet);
         Organization myorganization =organizationDAO.findByName(dbConnection,"VET");
         System.out.println("My Organization:"+myorganization);

@@ -41,7 +41,7 @@ public class OrganizationDAO {
                     WEBSITE VARCHAR(100),
                     EMAIL VARCHAR(100),
                     CONTACT_NUMBER VARCHAR(100),
-                    REGISTRATION_NO INT,
+                    REGISTRATION_NO INTEGER,
                     DESCRIPTION VARCHAR(255))
                     """);
         }catch(SQLException sqlException) {
@@ -54,11 +54,12 @@ public class OrganizationDAO {
                 registration_no,description) values(?,?,?,?,?,?)
                 """)) {
                     preparedStatement.setString(1,vet.name());
-                    preparedStatement.setString(2,vet.description());
-                    preparedStatement.setString(3,vet.website());
-                    preparedStatement.setString(4,vet.email());
-                    preparedStatement.setString(5,vet.contactNumber());
-                    preparedStatement.setLong(6,vet.registration());
+                 
+                    preparedStatement.setString(2,vet.website());
+                    preparedStatement.setString(3,vet.email());
+                    preparedStatement.setString(4,vet.contactNumber());
+                    preparedStatement.setLong(5,vet.registration());
+                    preparedStatement.setString(6,vet.description());
                     preparedStatement.executeUpdate();
                     
         }catch(SQLException sqlException) {
@@ -76,12 +77,12 @@ public class OrganizationDAO {
             ResultSet resultSet = preparedStatement.executeQuery();
             if(resultSet != null && resultSet.next()) {
                 organization = new Organization(
-                resultSet.getString("name"),
-                resultSet.getString("description"),
-                resultSet.getString("website"),
-                resultSet.getString("email"),
-                resultSet.getString("contact_number"),
-                resultSet.getLong("resgistration"),null);
+                resultSet.getString("NAME"),
+                resultSet.getString("WEBSITE"),
+                resultSet.getString("EMAIL"),
+                resultSet.getString("CONTACT_NUMBER"),
+                resultSet.getLong("REGITRATION_NO"),
+                resultSet.getString("DESCRIPTION"),null);
 
             }
         }catch(SQLException exception) {

@@ -19,8 +19,9 @@ public class Tempdata {
     // System.out.println("Address:" + setaddress);
     // System.out.println("PostalCode:" + setpostalCode);
     // System.out.println("Contact:" + setcontact);
-        Organization vet= new Organization("Vellalar Educational Trust","Thindal,Erode","www.vet.com","contactvet.com",
-        "9843170755",123345678,LocalDate.of(1960,04,23));
+        Organization vet= new Organization("VET",
+        "www.vet.com","contact@vet.com","9843170755",
+        12345L,"Thindal,Erode",LocalDate.of(1960,04,23));
         System.out.println(vet);
         System.out.println(vet.name());
         System.out.println(vet.description());
