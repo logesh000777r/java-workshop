@@ -9,13 +9,16 @@ public class NumberTriangle {
         int rows = scanner.nextInt();
         scanner.close();
 
-        int current = 1;
+    
         for (int i = 1; i <= rows; i++) {
+            int current = 1;
             // inner loop: print i numbers on this row
             for (int j = 1; j <= i; j++) {
                 System.out.print(current + " ");
-                current++;
+                current++;              
+        
             }
+    
             System.out.println();
         }
     }
